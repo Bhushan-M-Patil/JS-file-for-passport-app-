@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Application form.css" />
+  <title>Passport</title>
+</head>
+
+<body>
+  <div>
+    <img src="download.jfif" class="background" alt="js not supported" />
+    <h1 class="heading">
+      GOVERNMENT OF INDIA, MINISTRY OF EXTERNAL AFFAIRS PASSPORT APPLICATION
+      FORM
+    </h1>
+    <br /><br /><br /><br />
+  </div>
+
+  <!--author Bhushan-->
+  <div class="button-container">
+    <a class="nav-button" href="#section1">Service Required</a>
+    <a class="nav-button" href="#section2">Applicant Details</a>
+    <a class="nav-button" href="#section3">Family Details</a>
+    <a class="nav-button" href="#section4">Present Residential Address Details</a>
+    <a class="nav-button" href="#section5">Emergency Contact Details</a>
+    <a class="nav-button" href="#section6">Previous Passport/ Application Details</a>
+    <a class="nav-button" href="#section7">Other details</a>
+    <a class="nav-button" href="#section8">Fee Details</a>
+    <a class="nav-button" href="#section9">Enclosures</a>
+    <a class="nav-button" href="#section10">Self Declaration</a>
+    <br /><br /><br /><br />
+  </div>
+  <!--GG in the chat-->
+  <form>
+    <div class="grid-container">
+      <div class="grid-item-section" id="section1">
+        <strong>[1] Service Required</strong>
+      </div>
+      <div class="grid-item">
+        <b>Enter file number:</b>
+        <input type="text" class="fileNumber" id="fileNumber">
+        <br><small id="errorMessage" style="color:tomato; text-shadow: 1px 1px ;" ></small>
+      </div>
+
+      <div class="grid-item" id="freshPassportCheck" >
+        <b>(1.1) Applying for </b>
+        <br /><br />
+        <input type="radio" name="applying-for" value="Fresh-Passport"  onclick="validateFreshPassportCheck1_TC_SR_003_2()"/>Fresh Passport
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="radio" name="applying-for" value="Re-issue-of-Passport" onclick="validateFreshPassportCheck1_TC_SR_003_1()" />Re-issue of Passport
+      </div>
+      <div class="grid-item" id="reissue-reason" >
+        <b>(1.2) If re-issue, specify reason</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>
+              <input type="radio" name="re-issue reason"  onclick="validateFreshPassportCheck1_TC_SR_005()"/> Validity Expired
+              within 3 years/Due to Expire&nbsp;&ensp;
+            </td>
+            <td>
+              <input type="radio" name="re-issue reason" onclick="validateFreshPassportCheck1_TC_SR_005()"/> Exhaustion of
+              pages&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="re-issue reason" onclick="validateFreshPassportCheck1_TC_SR_005()"/> Validity Expired
+              more than 3 years ago&nbsp;
+            </td>
+            <td>
+              <input type="radio" name="re-issue reason" onclick="validateFreshPassportCheck1_TC_SR_005()"/> Lost
+              Passport&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="re-issue reason" onclick="validateFreshPassportCheck1_TC_SR_005()"/> Change in Existing
+              Personal Particulars&nbsp;
+            </td>
+            <td>
+              <input type="radio" name="re-issue reason" onclick="validateFreshPassportCheck1_TC_SR_005()"/> Damaged
+              Passport&nbsp;
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="grid-item" id="specify-reason" >
+        <b>(1.3) If change in existing personal particulars, specify reason(s)</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>
+              <input type="checkbox" id="checkbox1" name="reason" value="Appearance"/>
+              <label for="checkbox1">Appearance &ensp;&ensp;</label>
+            </td>
+            <td>
+              <input type="checkbox" id="checkbox2" name="reason" value="Signature" />
+              <label for="checkbox2">Signature </label>
+            </td>
+            <td>
+              <input type="checkbox" id="checkbox3" name="reason" value="Given Name" />
+              <label for="checkbox3">Given Name</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="checkbox4" name="reason" value="Surname" />
+              <label for="checkbox4">Surname</label>
+            </td>
+            <td>
+              <input type="checkbox" id="checkbox5" name="reason" value="Date of Birth" />
+              <label for="checkbox5">Date of Birth &ensp;&ensp;</label>
+            </td>
+            <td>
+              <input type="checkbox" id="checkbox6" name="reason" value="Spouse Name" />
+              <label for="checkbox6">Spouse Name</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="checkbox7" name="reason" value="Address" />
+              <label for="checkbox7">Address</label>
+            </td>
+            <td>
+              <input type="checkbox" id="checkbox8" name="reason" value="Delete ECR" />
+              <label for="checkbox8">Delete ECR</label>
+            </td>
+            <td>
+              <input type="checkbox" id="checkbox9" name="reason" value="Others, Please specify" />
+              <label for="checkbox9">Others, Please specify</label>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <textarea placeholder="others, specify reason" name="reason"></textarea>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="grid-item">
+        <b>(1.4) Type of Application</b><br /><br />
+        <input type="radio" name="type" id="type-of-application" value="Normal"/> Normal &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; <input type="radio" name="type" value="Tatkaal"/> Tatkaal
+      </div>
+      <div class="grid-item">
+        <b>(1.5) Type of Passport Booklet</b><br /><br />
+        <input type="radio" name="booklet" id="pages"/> 36 Pages &nbsp; &nbsp;
+        &nbsp; &nbsp; <input type="radio" name="booklet" /> 60 Pages
+      </div>
+      <div class="grid-item">
+        <b>(1.6) Validity Required (For minors between 15 to 18 years)</b><br /><br />
+        <input type="radio" name="validity" id="validity"/> 10 years &nbsp; &nbsp;
+        &nbsp; &nbsp; <input type="radio" name="validity" /> Up to age
+      </div>
+    </div>
+    <br /><br />
+    <br /><br /><br /><br /><br /><br />
+<!-------------------------------------------------------22222222222222222222222------------------------------------------------------------------------------>
+    <div class="grid-container">
+      <div class="grid-item-section" id="section2">
+        <b>[2] Applicant Details</b>
+      </div>
+      <div class="grid-item" id="name">
+        <b>(2.1) Applicant's Given Name<br />(First name followed by middle name and initials are not allowed)</b>
+        <br /><br />
+        <input type="text" id="applicantName" maxlength="90" placeholder="FirstName MiddleName Surname" style="width: 500px; height: fit-content"  />
+      </div>
+      <div class="grid-item" id="aliases">
+        <b>(2.2) Are you known by any other names (aliases)?</b>
+        <br /><br />
+        <input type="radio" name="alias"  /> Yes &nbsp; &nbsp; &nbsp;
+        &nbsp; <input type="radio" name="alias" /> No
+      </div>
+      <div class="grid-item"  id="changed_name">
+        <b>(2.3) Have you ever changed your name?</b>
+        <br /><br />
+        <input type="radio" name="name_change"/> Yes &nbsp; &nbsp; &nbsp;
+        &nbsp; <input type="radio" name="name_change" /> No
+      </div>
+      <div class="grid-item" id="date-of-birth">
+        <b>(2.4) Date of Birth (DD-MM-YYYY)</b>
+        <br /><br />
+        <input type="date" name="dob"/>
+      </div>
+      <div class="grid-item" id="place_of_birth">
+        <b>(2.5) Place of Birth (Village or Town or City)</b>
+        <br />&ensp;&ensp;&ensp;&nbsp;
+        <input type="text" name="birthplace" maxlength="25" style="width: 250px" id="city" />
+        <br /><br />
+        &ensp;&ensp;&ensp;&nbsp;District(If born in India)<br />
+        &ensp;&ensp;&ensp;
+        <input type="text" name="birthplace" maxlength="25" style="width: 250px" id="district"/>
+        <br /><br />
+        &ensp;&ensp;&ensp;&nbsp;State/UT(If born in India)<br />
+        &ensp;&ensp;&ensp;
+        <input type="text" name="birthplace" maxlength="25" style="width: 250px" id="state"/>
+        <br /><br />
+        &ensp;&ensp;&ensp;&nbsp;Region/Country (If born abroad) If
+        <br />&ensp;&ensp;&ensp;&nbsp;born before 15/08/1947 in a place
+        <br />&ensp;&ensp;&ensp;&nbsp;now in Pakistan or Bangladesh,<br />&ensp;&ensp;&ensp;&nbsp;write
+        "Undivided India"
+        <br />
+        &ensp;&ensp;&ensp;
+        <input type="text" name="birthplace" maxlength="25" style="width: 250px" id="country"/>
+      </div>
+      <div class="grid-item" id="employment-type">
+        <b>(2.6) Employment Type</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>
+              <input type="radio" name="employment"  /> PSU&nbsp;
+            </td>
+            <td><input type="radio" name="employment" /> Government&nbsp;</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="employment" /> Statutory Body&nbsp;
+            </td>
+            <td>
+              <input type="radio" name="employment" /> Retired Government
+              Servant&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="employment" /> Self Employed &nbsp;
+            </td>
+            <td><input type="radio" name="employment" /> Private&nbsp;</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="employment" /> Homemaker &nbsp;</td>
+            <td>
+              <input type="radio" name="employment" /> Not Employed&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="employment" /> Retired-Private Service
+              &nbsp;&ensp;&ensp;&ensp; &ensp;
+            </td>
+            <td><input type="radio" name="employment" /> Student&nbsp;</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="employment" /> Others &nbsp;</td>
+            <td>
+              <input type="radio" name="employment" /> Owners, Partners &
+              Directors of companies which are members of CII, FICCI &
+              ASSOCHAM&nbsp;
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="grid-item">
+        <b>(2.7) If employed in Government/ Statutory Body/ PSU, specify
+          organization name</b>
+        <br /><br />
+        <input type="text" maxlength="45" style="width: 400px" id="org_name">
+      </div>
+      <div class="grid-item" id="pe">
+        <b>(2.8) Is either of your parent (in case of minor)/ spouse, a
+          government servant?</b>
+        <br /><br />
+        <input type="radio" name="parent-employment"  />Yes&ensp;&ensp;&ensp;
+        <input type="radio" name="parent-employment"  />No
+      </div>
+
+      <div class="grid-item" id="g">
+        <b>(2.9) Gender</b>
+        <br /><br />
+        <input type="radio" name="gender"  /> Male &ensp;&ensp;&ensp;
+        <input type="radio" name="gender" /> Female &ensp;&ensp;&ensp;
+        <input type="radio" name="gender" /> Transgender
+      </div>
+      <div class="grid-item" id="ms">
+        <b>(2.10) Marital Status</b>
+        <br /><br />
+        <input type="radio" name="marital-status"  /> Single
+        &ensp;&ensp; <input type="radio" name="marital-status" /> Married
+        &ensp;&ensp; <input type="radio" name="marital-status" /> Divorced
+        &ensp;&ensp;
+        <input type="radio" name="marital-status" /> Widow/Widower
+        &ensp;&ensp; <input type="radio" name="marital-status" /> Separated
+      </div>
+      <div class="grid-item" id="ns">
+        <b>(2.11) Citizenship of India by</b>
+        <br /><br />
+        <input type="radio" name="nationality"  /> Birth
+        &ensp;&ensp;&ensp; <input type="radio" name="nationality" /> Descent
+        &ensp;&ensp;&ensp;
+        <input type="radio" name="nationality" /> Registration/Naturalization
+      </div>
+      <div class="grid-item">
+        <b>(2.12) PAN (If available)</b>
+        <br /><br />
+        <input type="text" maxlength="10" minlength="10" />
+      </div>
+      <div class="grid-item" id="voter">
+        <b>(2.13) Voter ID (If available)</b>
+        <br /><br />
+        <input type="text" maxlength="16" minlength="16" id="voter_id" oninput="convertToUppercase()"/>
+      </div>
+      <div class="grid-item">
+        <b>(2.14) Aadhar Number</b>
+        <br /><br />
+        <input type="text" maxlength="12" minlength="12" id="aadhar_no"/>
+      </div>
+      <div class="grid-item" id="qualification_option">
+        <b>(2.15) Educational Qualification</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>
+              <input type="radio" name="qualification" /> 7th pass or less
+            </td>
+            <td>
+              <input type="radio" name="qualification" /> Between 8th and 9th
+              Standard
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="qualification" /> 10th pass and above
+            </td>
+            <td>
+              <input type="radio" name="qualification" /> Graduate and above
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="grid-item" id="ecr_option">
+        <b>(2.16) Are you eligible for Non-ECR category?</b>
+        <br /><br />
+        <input type="radio" name="ecr"/>Yes&ensp;&ensp;&ensp;&ensp;
+        <input type="radio" name="ecr" />No
+      </div>
+      <div class="grid-item">
+        <b>(2.17) Visible Distinguishing Mark</b>
+        <br /><br />
+        <input type="text" maxlength="45" style="width: 400px" />
+      </div>
+    </div>
+    <br /><br />
+    <br /><br /><br /><br /><br /><br />
+
+
+<!------------------------------------------------------3333333333333333333333333---------------------------------------------------------------->
+
+    <div class="grid-container">
+      <div class="grid-item-section" id="section3">
+        <b>[3] Family Details</b>
+      </div>
+      <div class="grid-item">
+        <b>(3.1) Father's Given Name<br />(First name followed by middle name
+          and initials are not allowed)</b>
+        <br /><br />
+        <input type="text" maxlength="500" placeholder="FirstName MiddleName Surname" style="width: 500px"  id="father-name"/>
+      </div>
+      <div class="grid-item">
+        <b>(3.2) Mother's Given Name<br />(First name followed by middle name
+          and initials are not allowed)</b>
+        <br /><br />
+        <input type="text" maxlength="500" placeholder="FirstName MiddleName Surname" style="width: 500px"  id="mother-name"/>
+      </div>
+      <div class="grid-item">
+        <b>(3.3) Legal Guardian's Given Name<br />(If applicable & initials
+          not allowed)</b>
+        <br /><br />
+        <input type="text" maxlength="500" placeholder="FirstName MiddleName Surname" style="width: 500px" id="guardian-name"/>
+      </div>
+      <div class="grid-item">
+        <b>(3.4) Spouse's Given Name<br />(If applicable & initials not allowed)</b>
+        <br /><br />
+        <input type="text" maxlength="500" placeholder="FirstName MiddleName Surname" style="width: 500px" id="spouse-name"/>
+      </div>
+      <div class="grid-item">
+        <b>(3.5) If applicant is minor, provide following details<br /></b>
+        <br />
+        <b>Parent's Passport Details(If passport has been applied but not
+          received then provide file number)</b>
+        <br /><br />
+        <hr />
+        <br />
+        <p>
+          <input type="radio" name="father-passport" value="file_number">&ensp;file_Number &ensp;&ensp;
+          <input type="radio" name="father-passport" value="passport_number">&ensp;passport_number &ensp;&ensp;<br><br>
+          Father/Legal Guardian's File/Passport Number &ensp; &ensp;
+          <input type="text" maxlength="15" style="width: 200px" id="father-detail"/>
+        </p>
+        <br/>
+        <p>
+          Father/ Legal Guardian's Nationality, if not Indian&nbsp;
+          <input type="text" maxlength="15" style="width: 200px" />
+        </p>
+        <br />
+        <hr />
+        <br />
+        <p>
+          <input type="radio" name="mother-passport" value="file_number">&ensp;File_Number &ensp;&ensp;
+          <input type="radio" name="mother-passport" value="passport_number">&ensp;passport_Number &ensp;&ensp;
+          <br><br>
+          Mother/Legal Guardian's File/Passport Number&ensp; &ensp;
+          <input type="text" maxlength="15" style="width: 200px" id="mother-detail"/>
+        </p>
+        <br />
+        <p>
+          Mother/ Legal Guardian's Nationality, if not Indian
+          <input type="text" maxlength="15" style="width: 200px" />
+        </p>
+      </div>
+      <br /><br />
+    </div>
+    <br /><br />
+    <br /><br /><br /><br /><br /><br />
+
+<!------------------------------------------------------44444444444444444444444444---------------------------------------------------------------->
+   
+    <div class="grid-container">
+      <div class="grid-item-section" id="section4">
+        <b>[4] Present Residential Address Details (Where applicant presently
+          resides)
+        </b>
+      </div>
+      <div class="grid-item">
+        <table>
+          <tr>
+            <td><b>(4.1) House No. and Street Name</b></td>
+            <td>
+              <input type="text" maxlength="40" style="width: 300px" id="houseAndStreet" />
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>&emsp;&ensp;&nbsp;Village or Town or City</td>
+            <td>
+              <input type="text" maxlength="25" style="width: 300px" id="villageId" />
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>&emsp;&ensp;&nbsp;District</td>
+            <td>
+              <input type="text" maxlength="25" style="width: 300px"  id="districtId"/>
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>&emsp;&ensp;&nbsp;Police Station</td>
+            <td>
+              <input type="text" maxlength="25" style="width: 300px" id="policeStationId" />
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>&emsp;&ensp;&nbsp;PIN</td>
+            <td>
+              <input type="text" maxlength="8" style="width: 200px" id="pin" />
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>&emsp;&ensp;&nbsp;Mobile Number</td>
+            <td><input type="tel" maxlength="10" style="width: 300px" minlength="10" id="m_no"/></td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>&emsp;&ensp;&nbsp;Telephone Number</td>
+            <td><input type="tel" maxlength="12" style="width: 300px" /></td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>&emsp;&ensp;&nbsp;Email ID</td>
+            <td>
+              <input type="email" maxlength="40" style="width: 300px" />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="grid-item">
+        <b>(4.2) Is permanent address same as present address?</b>
+        <br /><br />&ensp;&ensp;&ensp;
+        <input type="radio" name="addr-check" value="Yes" onclick="validate_TC_EC_5_1()"/>Yes&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <input type="radio" name="addr-check" value="No" onclick="validate_TC_EC_5_1()"/> No
+        <br /><br />&ensp;&ensp;&ensp;&ensp; ( If no, provide details in
+        Column 4 of Supplementary Form )
+      </div>
+    </div>
+    <br /><br />
+    <br /><br /><br /><br /><br /><br />
+
+
+    
+<!-------------------------------------------------55555555555555555555555555555555555555------------------------------------------------------------------>
+    <div class="grid-container" id="section5">
+      <div class="grid-item-section" >
+        <b>[5] Emergency Contact Details</b>
+      </div>
+      <div class="grid-item">
+        <table style="padding: 10px">
+          <tr>
+            <td>
+              Name and Address <br />(Mention address only <br />
+              if different from <br />
+              present residential address)
+            </td>
+            <td>
+              <textarea maxlength="100" style="width: 400px; height: 70px" id="nameAndAddress_5"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>Mobile Number</td>
+            <td><input type="tel" maxlength="12" style="width: 300px" id="mobileNo_5"/></td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>Telephone Number</td>
+            <td><input type="tel" maxlength="12" style="width: 300px" id="telephone_5"/></td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>Email ID</td>
+            <td>
+              <input type="email" maxlength="40" style="width: 300px" id="email_5"/>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br /><br />
+    <br /><br /><br /><br /><br /><br />
+
+
+<!-------------------------------------------------6666666666666666666666666666666666666666------------------------------------------------------------------>
+
+    <div class="grid-container"  >
+      <div class="grid-item-section" id="section_heading">
+        <b>[6] Previous Passport/ Application Details</b>
+      </div>
+      <div class="grid-item" id="section6_1">
+        <table style="padding: 10px">
+          <tr>
+            <td>Passport/ Identity Certificate Number</td>
+            <td><input type="text" maxlength="8" style="width: 150px" id="passportNo"/></td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>Date of Issue</td>
+            <td><input type="date" id="date-of-issue_6" /></td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>Date of Expiry</td>
+            <td><input type="date" id="date-of-expiry_6"/></td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>Place of Issue</td>
+            <td><input type="text" maxlength="40" style="width: 150px" id="issue_place_6"/></td>
+          </tr>
+        </table>
+        <p>
+          If you have held/ hold any diplomatic/ official passport, provide
+          details in Column 6 of Supplementary Form
+        </p>
+      </div>
+      <div class="grid-item" id="section6_2">
+        <b>[6.2] Have you ever applied for passport, but not issued? </b><br /><br />&ensp; &ensp;
+        <input type="radio" name="issued" value="Yes" onclick="validate_TC_PP_6_2_2()"/>Yes &ensp; &ensp; &ensp;&ensp; &ensp; 
+        <input type="radio" name="issued" value="No"  onclick="validate_TC_PP_6_2_2()"/>No <br /><br />If
+        yes, provide the following details <br /><br />
+        <table>
+          <tr>
+            <td>
+              <label for="file-number">File Number &ensp; &ensp;</label>
+            </td>
+            <td>
+              <input type="text" maxlength="15" style="width: 200px" name="file-number" id="fileNumber_6"/>
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="applying-year">Month and Year of Applying &ensp; &ensp;</label>
+            </td>
+            <td>
+              <input type="month" id="start" name="applying-year" id="monthAndYear" />
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="office-name">Name of passport office where applied&ensp; &ensp;</label>
+            </td>
+            <td>
+              <input type="text" maxlength="25" style="width: 200px" name="office-name" id="officeName_6"/>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  
+    <br /><br /><br /><br /><br /><br />
+
+    <div class="grid-container">
+      <div class="grid-item-section" id="section7">
+        <b>[7] Other Details</b>
+      </div>
+      <div class="grid-item">
+        <b>(7.1) Provide the following details if there are any criminal
+          proceedings pending against the applicant.</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>
+              (7.1.1) Are any proceedings in respect of an offence alleged to
+              have been committed by you pending before a criminal court in
+              India? If yes, fill Column 6.1 of Supplementary Form
+            </td>
+            <td>
+              <input type="radio" name="other1" id="7_1_1" />Yes
+            </td>
+            <td><input type="radio" name="other1" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.1.2) Has any warrant or summons for your appearance been
+              issued & pending before a court under any law for the time being
+              in force? If yes, fill Column 6.2 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other2"  id="7_1_2"/>Yes</td>
+            <td><input type="radio" name="other2" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.1.3) Has a warrant for your arrest been issued by a court
+              under any law for the time being in force? If yes, fill Column
+              6.3 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other3"  id="7_1_3"/>Yes</td>
+            <td><input type="radio" name="other3" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.1.4) Has an order prohibiting your departure from India been
+              made by any court? If yes, fill Column 6.4 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other4"  id="7_1_4"/>Yes</td>
+            <td><input type="radio" name="other4" />No</td>
+          </tr>
+        </table>
+      </div>
+      <div class="grid-item">
+        <b>(7.2) Provide the following details if applicant has applied for or
+          been granted foreign citizenship.</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>
+              (7.2.1) Have you ever been granted citizenship by any other
+              region/country? If yes, fill Column 6.9 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other2.1"  id="7_2_1"/>Yes</td>
+            <td><input type="radio" name="other2.1" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.2.2) Have you ever held the passport of any other
+              region/country at any time? If yes, fill Column 6.10 of
+              Supplementary Form
+            </td>
+            <td><input type="radio" name="other2.2"  id="7_2_2"/>Yes</td>
+            <td><input type="radio" name="other2.2" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.2.3) Have you ever surrendered your Indian passport? If yes,
+              fill Column 6.11 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other2.3"  id="7_2_3"/>Yes</td>
+            <td><input type="radio" name="other2.3" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.2.4) Have you ever applied for renunciation of Indian
+              citizenship? If yes, fill Column 6.12 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other2.4"  id="7_2_4"/>Yes</td>
+            <td><input type="radio" name="other2.4" />No</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="grid-item">
+        <b>(7.3) Provide the following details if the applicant has been
+          refused/denied passport.</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>
+              (7.3.1) Have you ever been refused/denied passport? Yes No If
+              yes, fill Column 6.6 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other3.1"  id="7_3_1"/>Yes</td>
+            <td><input type="radio" name="other3.1" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.3.2) Has your passport ever been impounded? If yes, fill
+              Column 6.7 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other3.2"  id="7_3_2"/>Yes</td>
+            <td><input type="radio" name="other3.2" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.3.3) Has your passport ever been revoked? If yes, fill Column
+              6.8 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other3.3"  id="7_3_3"/>Yes</td>
+            <td><input type="radio" name="other3.3" />No</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="grid-item">
+        <b>(7.4) Provide the following details if applicant has returned to
+          India on Emergency Certificate.</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>
+              (7.4.1) Have you ever returned to India on Emergency Certificate
+              (EC)? If yes, fill Column 6.13 of Supplementary Form
+            </td>
+            <td><input type="radio" name="other4.1"  id="7_4_1"/>Yes</td>
+            <td><input type="radio" name="other4.1" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.4.2) Have you ever been deported from any country? If yes,
+              was the cost borne by the Government of India and if so, has the
+              same been refunded?
+            </td>
+            <td><input type="radio" name="other4.2"  id="7_4_2"/>Yes</td>
+            <td><input type="radio" name="other4.2" />No</td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>
+              (7.4.3) Have you ever been repatriated from any country back to
+              India? If yes, was the cost borne by the Government of India and
+              if so, has the same been refunded?
+            </td>
+            <td><input type="radio" name="other4.3" id="7_4_3"/>Yes</td>
+            <td><input type="radio" name="other4.3" />No</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="grid-item">
+        <b>(7.5) Provide the following details if the applicant has been
+          convicted by a court in India.</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td style="text-align: justify">
+              Have you, at any time during the period of five years
+              immediately preceding the date of this application, been
+              convicted by a court in India for any offence involving moral
+              turpitude and sentenced in respect thereof to imprisonment for
+              not less than two years? If yes, fill Column 6.5 of
+              Supplementary Form
+            </td>
+          </tr>
+          <tr>
+            <td><br /></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="other5.1"  id="7_5_1"/>Yes &ensp; &ensp;
+              <input type="radio" name="other5.1" />No
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br />
+
+    <div class="grid-container">
+      <div class="grid-item-section" id="section8">
+        <b>[8] Fee Details (Not to be filled by applicants submitting the
+          application at Passport Seva Kendra)</b>
+      </div>
+      <div class="grid-item" id="p">
+        <b>(8.1) Fee amount in (Rs)</b>
+        <br /><br />
+        <input type="number" id="fees_8" />
+      </div>
+      <div class="grid-item">
+        <b>(8.2) If paid by Demand Draft (DD), provide the following
+          details</b>
+        <br /><br />
+        <table>
+          <tr>
+            <td>DD Number</td>
+            <td><input type="number" id="dd_Number"/></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>DD Issue Date</td>
+            <td><input type="date" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>DD Expiry Date &ensp;&ensp;</td>
+            <td><input type="date" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>Bank Name</td>
+            <td><input type="text" maxlength="20" style="width: 180px" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>Branch</td>
+            <td><input type="text" maxlength="25" style="width: 180px" /></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br />
+
+    <div class="grid-container">
+      <div class="grid-item-section" id="section9">
+        <b>[9] Enclosures</b>
+      </div>
+      <div class="grid-item">
+        <table>
+          <tr>
+            <td>1.</td>
+            <td>
+              <input type="text" maxlength="20" style="width: 250px" />&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            </td>
+            <td>2.</td>
+            <td><input type="text" maxlength="20" style="width: 250px" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>
+              <input type="text" maxlength="20" style="width: 250px" />&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            </td>
+            <td>4.</td>
+            <td><input type="text" maxlength="20" style="width: 250px" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td>
+              <input type="text" maxlength="20" style="width: 250px" />&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            </td>
+            <td>6.</td>
+            <td><input type="text" maxlength="20" style="width: 250px" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td>
+              <input type="text" maxlength="20" style="width: 250px" />&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            </td>
+            <td>8.</td>
+            <td><input type="text" maxlength="20" style="width: 250px" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>9.</td>
+            <td>
+              <input type="text" maxlength="20" style="width: 250px" />&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            </td>
+            <td>10.</td>
+            <td><input type="text" maxlength="20" style="width: 250px" /></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br /><br />
+    <a class="nav-button" style="margin-left: 45%" href="#section10">Save & Next</a>
+    <br /><br /><br /><br /><br /><br /><br />
+
+    <div class="grid-container">
+      <div class="grid-item-section" id="section10">
+        <b>[10] Self Declaration</b>
+      </div>
+      <div class="grid-item">
+        <p>
+          I owe allegiance to the sovereignty, unity & integrity of India, and
+          have not voluntarily acquired citizenship or travel document of any
+          other country. I have not lost, surrendered or been deprived of the
+          citizenship of India. I have not contravened any of the conditions
+          relating to the possession and use of an Indian passport.
+          <br /><br />I affirm that the information and particulars given by
+          me in this form are true and correct. I further state that I am not
+          suppressing any material information in this regard. I further
+          affirm that the enclosures and documentary proof submitted in
+          support of my application for an Indian passport are authentic and
+          solely pertain to me and I am fully responsible for the accuracy of
+          the same. I am liable to be penalized or prosecuted if found
+          otherwise. I am aware that under the Passports Act, 1967 it is a
+          criminal offence to furnish any false information or to suppress any
+          material information with a view to obtaining passport or travel
+          document. <br /><br />I have read and understood the contents of the
+          above and by submitting this form certify that all the information
+          submitted by me in the form is bonafide.
+        </p>
+      </div>
+      <div class="grid-item">
+        <table>
+          <tr>
+            <td>Place</td>
+            <td><input type="text" maxlength="25" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>Digital Signature &ensp; &ensp; &ensp; &ensp;</td>
+            <td><input type="file" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td><input type="date" /></td>
+          </tr>
+          <tr>
+            <td><br /><br /></td>
+          </tr>
+          <tr>
+            <td>Photo of User</td>
+            <td><input type="file" /></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <button type="button" class="heading" onclick="validateForm()">SUBMIT</button>
+      </div>
+    </div>
+
+    <div id="error">
+
+    </div>
+  </form>
+
+  <!-- <script type="text/javascript" src="Validating_file_number.js"> -->
+  
+    <!-- // function saveApplicant_name(){
+       var name = document.getElementById("applicantName").value;
+       localStorage.setItem("applicantName", name);
+     }
+     var checkStorage = localStorage.getItem("applicantName");
+     if(checkStorage) -->
+
+  <!-- </script> -->
+  <script type="text/javascript" src="validation.js"></script>
+
+</body>
+
+</html>

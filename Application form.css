@@ -1,0 +1,115 @@
+input[type="radio"] {
+  accent-color: green;
+}
+
+body {
+  margin: 20px 50px 20px 50px;
+  background-color: rgb(27, 28, 27);
+}
+
+.background {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: #c2acac;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fffefe;
+  background-color: #007bff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: grey;
+  text-align: left;
+  color: white;
+  padding: 20px 20px;
+  font-size: 18px;
+  box-shadow: 7px 7px 7px lightgrey;
+
+  border: rgb(7, 7, 7);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.grid-item-section {
+  background-color: purple;
+  text-align: left;
+  color: white;
+  padding: 20px 20px;
+  font-size: 22px;
+  /* grid-column: 1/-1; for grid of one column till last  */
+  grid-column: 1/-1;
+  box-shadow: 7px 7px 5px lightpink;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (min-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .heading {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .heading {
+    text-align: center;
+  }
+}
+
+/* Responsive styles for larger screens */
+@media screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .heading {
+    text-align: center;
+  }
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#specify-reason,
+#reissue-reason{
+  display: none;
+}
+
